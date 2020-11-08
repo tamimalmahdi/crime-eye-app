@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: Chess Store
+  app_description: A place to purchase chess sets and items
+
+  welcome:
+    home:
+      title: Chess Store
+      welcome: Welcome to my chess store!
