@@ -1,3 +1,11 @@
-%h1= t('.title')
-%p= t('.welcome')
-= image_tag("acadia_set.jpg", class: 'bg_image')
+%h1{id: "welcome", onclick: "ToggleText(this)"}= t('.title')
+%p{id: "welcomep"}= t('.welcome')
+= image_tag("bg.jpg", class: 'bg_image')
+
+%input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
+%input#medb{onclick: "SetFontSize('100%')", type: "button", value: "Medium"}
+%input#largeb{onclick: "SetFontSize('120%')", type: "button", value: "Large"}
+
+%p
+%input#lightmode{onclick: "SetPageStyle('Light')", type: "button", value: "Light"}
+%input#darkmode{onclick: "SetPageStyle('Dark')", type: "button", value: "Dark"}

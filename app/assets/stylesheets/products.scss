@@ -4,6 +4,7 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .products {
   color: #17252a;
   margin: 0;
@@ -33,7 +34,10 @@
 
   td.image {
     // Hide this on mobile devices
-    display: none;
+    display: block;
+    img {
+      height: 8em;
+    }
 
     // Assume anything bigger than 30em
     // is a non-mobile device and can
@@ -47,6 +51,7 @@
 }
 
 td.description {
+  width: 100%;
   h1 {
     font-size: 1.4em;
   }

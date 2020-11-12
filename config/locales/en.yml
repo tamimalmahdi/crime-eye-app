@@ -33,7 +33,7 @@ en:
   app_title: Chess Store
   app_description: A place to purchase chess sets and items
 
-  welcome:
+  home:
     home:
       title: 'Chess Store'
-      welcome: Welcome to my chess store!
+      welcome: 'Welcome to my chess store!'
