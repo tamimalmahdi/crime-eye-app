@@ -13,16 +13,14 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 $bg-colour: #17252a;
 $nav-colour: #f2f2f2;
 $hover-colour: #def2f1;
 $active-colour: #3aafa9;
 
-html{
+html {
   height: 100%;
 }
 
@@ -30,31 +28,27 @@ body {
   padding: 0;
   margin: 0;
   min-height: 100%;
-
   display: flex;
   flex-direction: column;
 
-  .bg_image{
+  .bg_image {
     width: 100%;
     height: auto;
   }
-
 }
 
-footer{
+footer {
   margin-top: auto;
   background-color: $bg-colour;
   color: #fff;
   height: 40px;
   width: 100%;
   text-align: center;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   padding-top: 15px;
 }
-
 /* Style the links inside the navigation bar */
-
 .topnav {
   background-color: $bg-colour;
   overflow: hidden;
@@ -67,14 +61,12 @@ footer{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-
-/* Change the color of links on hover */
+    /* Change the color of links on hover */
     &:hover {
       background-color: $hover-colour;
       color: black;
     }
-
-/* Add an active class to highlight the current page */
+    /* Add an active class to highlight the current page */
     &.active {
       background-color: $active-colour;
       color: white;
@@ -85,98 +77,105 @@ footer{
     display: none;
   }
 }
-
 /* Hide the link that should open and close the topnav on small screens */
-
 /* The sidebar menu */
 .sidebar {
- height: 100%; /* 100% Full-height */
- width: 0; /* 0 width - change this with JavaScript */
- position: fixed; /* Stay in place */
- z-index: 1; /* Stay on top */
- top: 0;
- left: 0;
- background-color: $bg-colour; /* Black*/
- overflow-x: hidden; /* Disable horizontal scroll */
- padding-top: 60px; /* Place content 60px from the top */
- transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: $bg-colour;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 60px;
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidebar */
+  /* The sidebar links */
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: $nav-colour;
+    display: block;
+    transition: 0.3s;
+
+    &.active {
+      background-color: $active-colour;
+    }
+  }
+  /* When you mouse over the navigation links, change their color */
+  a:hover {
+    background-color: $hover-colour;
+    color: black;
+  }
+  /* Position and style the close button (top right corner) */
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 }
-
-/* The sidebar links */
-.sidebar a {
- padding: 8px 8px 8px 32px;
- text-decoration: none;
- font-size: 25px;
- color: $nav-colour ;
- display: block;
- transition: 0.3s;
-
- &.active {
-   background-color: $active-colour;
- }
-
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
- background-color: $hover-colour;
- color: black;
-}
-
-/* Position and style the close button (top right corner) */
-.sidebar .closebtn {
- position: absolute;
- top: 0;
- right: 25px;
- font-size: 36px;
- margin-left: 50px;
-}
-
 /* The button used to open the sidebar */
 .openbtn {
- font-size: 20px;
- cursor: pointer;
- background-color: $bg-colour;
- color: white;
- padding: 10px 15px;
- border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: $bg-colour;
+  color: white;
+  padding: 10px 15px;
+  border: none;
 }
 
 .openbtn:hover {
- background-color: $hover-colour;
- color: black;
+  background-color: $hover-colour;
+  color: black;
 }
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
- transition: margin-left .5s; /* If you want a transition effect */
- button {
-   display: none;
-   width: 100%;
- }
+  transition: margin-left 0.5s;
+  /* If you want a transition effect */
+  button {
+    display: none;
+    width: 100%;
+  }
 }
 
 #main_content {
- transition: margin-left .5s; /* If you want a transition effect */
- padding: 20px;
+  transition: margin-left 0.5s;
+  /* If you want a transition effect */
+  padding: 20px;
 }
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
- .sidebar {padding-top: 15px;}
- .sidebar a {font-size: 18px;}
- #main button {
-   display: block;
- }
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+
+  #main button {
+    display: block;
+  }
 }
-
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   #main button {
     display: block;
   }
+
   .topnav {
     display: none;
   }
+
 }
