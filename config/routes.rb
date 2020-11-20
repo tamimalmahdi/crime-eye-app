@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts
   get 'about/about'
   get 'home/home'
   root 'home#home'
