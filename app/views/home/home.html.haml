@@ -2,10 +2,24 @@
 %p{id: "welcomep"}= t('.welcome')
 = image_tag("bg.jpg", class: 'bg_image')
 
+- if notice
+  %aside#notice= notice
+
+.home
+  %ul.catalog
+    - @products.each do |product|
+      %li
+        = image_tag(product.image_url)
+        %h2= product.title
+        %p
+          = sanitize(product.description)
+        .price
+          = number_to_currency(product.price)
+
+%br
 %input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
 %input#medb{onclick: "SetFontSize('100%')", type: "button", value: "Medium"}
 %input#largeb{onclick: "SetFontSize('120%')", type: "button", value: "Large"}
-
-%p
+%br
 %input#lightmode{onclick: "SetPageStyle('Light')", type: "button", value: "Light"}
 %input#darkmode{onclick: "SetPageStyle('Dark')", type: "button", value: "Dark"}
