@@ -36,10 +36,10 @@ body {
 
 #notice,
 .notice {
-  background: #ffb;
+  background: $hover-colour;
   border-radius: 0.5em;
-  border: solid 0.177em #882;
-  color: #882;
+  border: solid 0.177em $bg-colour;
+  color: $bg-colour;
   font-weight: bold;
   margin-bottom: 1em;
   padding: 1em 1.414em;
