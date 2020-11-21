@@ -15,10 +15,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-$bg-colour: #17252a;
-$nav-colour: #f2f2f2;
-$hover-colour: #def2f1;
-$active-colour: #3aafa9;
+@import "colours.scss";
 
 html {
   height: 100%;
@@ -36,6 +33,18 @@ body {
     height: auto;
   }
 }
+
+.notice, #notice {
+background: #ffb;
+border-radius: 0.5em;
+border: solid 0.177em #882;
+color: #882;
+font-weight: bold;
+margin-bottom: 1em;
+padding: 1em 1.414em;
+text-align: center;
+}
+
 
 footer {
   margin-top: auto;

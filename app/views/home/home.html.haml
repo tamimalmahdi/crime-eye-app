@@ -17,6 +17,9 @@
               = sanitize(product.description)
             .price
               = number_to_currency(product.price)
+              %br
+              %br
+              = button_to 'Add to Cart', line_items_path(product_id: product)
 
 %br
 %input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
