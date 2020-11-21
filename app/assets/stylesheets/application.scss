@@ -34,17 +34,32 @@ body {
   }
 }
 
-.notice, #notice {
-background: #ffb;
-border-radius: 0.5em;
-border: solid 0.177em #882;
-color: #882;
-font-weight: bold;
-margin-bottom: 1em;
-padding: 1em 1.414em;
-text-align: center;
+#notice,
+.notice {
+  background: #ffb;
+  border-radius: 0.5em;
+  border: solid 0.177em #882;
+  color: #882;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em 1.414em;
+  text-align: center;
 }
 
+#cart {
+  padding-top: 10px;
+  article {
+    h2 {
+      margin-top: 0;
+    }
+    background-color: $hover-colour;
+    padding: 1em;
+    margin: 1em;
+    @media (min-width: 30em) {
+      margin: 0; // desktop doesn't need this margin
+    }
+  }
+}
 
 footer {
   margin-top: auto;
@@ -57,7 +72,6 @@ footer {
   left: 0;
   padding-top: 15px;
 }
-
 /* Style the links inside the navigation bar */
 .topnav {
   background-color: $bg-colour;
@@ -87,7 +101,6 @@ footer {
     display: none;
   }
 }
-
 /* Hide the link that should open and close the topnav on small screens */
 /* The sidebar menu */
 .sidebar {
@@ -188,5 +201,4 @@ footer {
   .topnav {
     display: none;
   }
-
 }

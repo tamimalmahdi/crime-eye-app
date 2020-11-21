@@ -2,8 +2,9 @@
 %p{id: "welcomep"}= t('.welcome')
 = image_tag("bg.jpg", class: 'bg_image')
 
-- if notice
-  %aside#notice= notice
+
+#cart.carts
+  =render_if @cart && @cart.line_items.any?, @cart
 
 .home
   %ul.catalog
@@ -19,7 +20,7 @@
               = number_to_currency(product.price)
               %br
               %br
-              = button_to 'Add to Cart', line_items_path(product_id: product)
+              = button_to 'Add to Cart', line_items_path(product_id: product), remote: true
 
 %br
 %input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
