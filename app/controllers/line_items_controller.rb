@@ -31,10 +31,12 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to home_home_url }
-        format.js { @current_item = @line_item }
+        # format.js { @current_item = @line_item }
+        format.js { flash[:notice] = 'Item added to cart' }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
+        format.js { flash[:notice] = 'Could not add item to cart' }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end

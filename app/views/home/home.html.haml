@@ -20,8 +20,8 @@
               = number_to_currency(product.price)
               %br
               %br
-              = button_to 'Add to Cart', line_items_path(product_id: product), remote: true
-
+            = button_to 'Add to Cart', line_items_path(product_id: product), remote: true
+            
 %br
 %input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
 %input#medb{onclick: "SetFontSize('100%')", type: "button", value: "Medium"}
