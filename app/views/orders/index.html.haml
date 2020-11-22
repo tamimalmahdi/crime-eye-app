@@ -1,6 +1,10 @@
 %h1 Listing orders
 
-%table
+%table.products
+  %tfoot
+    %tr
+      %td.new_btn{:colspan => "8"}
+        = link_to 'New Order', new_order_path
   %thead
     %tr
       %th Name
@@ -13,7 +17,7 @@
 
   %tbody
     - @orders.each do |order|
-      %tr
+      %tr{:class => cycle('list_line_odd', 'list_line_even')}
         %td= order.name
         %td= order.address
         %td= order.email
@@ -21,7 +25,3 @@
         %td= link_to 'Show', order
         %td= link_to 'Edit', edit_order_path(order)
         %td= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Order', new_order_path

@@ -4,15 +4,17 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colours.scss";
 
 .products {
-  color: #17252a;
+  width: 100%;
+  color: $bg-colour;
   margin: 0;
   padding: 0.5em;
   text-decoration: none;
 
-  table tfoot tr td.new_btn {
-    color: #def2f1
+  tfoot tr td.new_btn {
+    color: $bg-colour;
   }
 
   a {
@@ -20,16 +22,14 @@
     padding: 0.354em 0.5em;
     border-radius: 0.354em;
   }
-  table {
-    border-collapse: collapse;
-  }
+
   td {
     padding: 0.5em;
     margin: 0;
   }
 
   tr.list_line_odd {
-    background-color: #def2f1;
+    background-color: $hover-colour;
   }
 
   td.image {
@@ -62,7 +62,9 @@ td.actions {
     padding: 0;
     list-style: none;
     li {
-
+      a:hover{
+        background-color: $active-colour;
+      }
       padding: 0.5em 0.5em;
     }
   }
@@ -70,6 +72,10 @@ td.actions {
 
 tfoot {
     td {
+      a:hover{
+          color: $hover-colour;
+          background-color: $active-colour;
+        }
       padding: 1.5em 0;
       text-align: right;
     }
