@@ -51,3 +51,11 @@ en:
   orders:
     index:
       title: 'Orders'
+
+  carts:
+    index:
+      title: 'Carts'
+
+  line_items:
+    index:
+      title: 'Line Items'
