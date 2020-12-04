@@ -1,3 +1,9 @@
-Order#shipped
+Dear #{@order.name}
 
-= @greeting + ", find me in app/views/order_mailer/shipped.text.haml"
+Your order from Chess Central has been shipped.
+
+You ordered the following items:
+
+\#{render @order.line_items}
+
+Thank you for shopping with us.
