@@ -1,19 +1,27 @@
 #mySidebar.sidebar
   %a.closebtn{:href => "javascript:void(0)", :onclick => "closeNav()"} ×
   %a{:class => is_active?(root_path), :href => root_path} Home
-  %a{:class => is_active?(products_path), :href => products_path} Products
-  %a{:class => is_active?(orders_path), :href => orders_path} Orders
-  %a{:class => is_active?(users_path), :href => users_path} Users
   %a{:class => is_active?(about_about_path), :href => about_about_path} About
+  - if session[:user_id]
+    %a{:class => is_active?(products_path), :href => products_path} Products
+    %a{:class => is_active?(orders_path), :href => orders_path} Orders
+    %a{:class => is_active?(users_path), :href => users_path} Users
+    %a{:class => is_active?(logout_path), :href => logout_path, "data-method" => "delete"} Logout
+  - else
+    %a{:class => is_active?(login_path), :href => login_path} Login
 
 #main
   %button.openbtn{:onclick => "openNav()"} ☰ Menu
 
 #myNavbar.topnav
   %a{:class => is_active?(root_path), :href => root_path} Home
-  %a{:class => is_active?(products_path), :href => products_path} Products
-  %a{:class => is_active?(orders_path), :href => orders_path} Orders
-  %a{:class => is_active?(users_path), :href => users_path} Users
   %a{:class => is_active?(about_about_path), :href => about_about_path} About
+  - if session[:user_id]
+    %a{:class => is_active?(products_path), :href => products_path} Products
+    %a{:class => is_active?(orders_path), :href => orders_path} Orders
+    %a{:class => is_active?(users_path), :href => users_path} Users
+    %a{:class => is_active?(logout_path), :href => logout_path, "data-method" => "delete"} Logout
+  - else
+    %a{:class => is_active?(login_path), :href => login_path} Login
   %a.icon{:href => "javascript:void(0);", :onclick => "myFunction()"}
     %i.fa.fa-bars

@@ -48,6 +48,7 @@ body {
 
 #cart {
   padding-top: 10px;
+
   article {
     h2 {
       margin-top: 0;
@@ -58,6 +59,58 @@ body {
     @media (min-width: 30em) {
       margin: 0; // desktop doesn't need this margin
     }
+  }
+}
+
+nav.logged_in_nav {
+  padding-left: 0px;
+  margin-left: 0px;
+
+  ul {
+    list-style: none;
+    background-color: $bg-colour;
+    float: left;
+
+    overflow: hidden;
+    li {
+      a{
+        color: white
+      }
+      float: left;
+      display: block;
+      color: $nav-colour;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      /* Change the color of links on hover */
+      &:hover {
+        background-color: $hover-colour;
+        color: black;
+      }
+      /* Add an active class to highlight the current page */
+      &.active {
+        background-color: $active-colour;
+        color: white;
+      }
+    }
+  }
+
+  input[type="submit"] {
+    // Make the logout button look like a
+    // link, so it matches the nav style
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.2em;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  input[type="submit"]:hover {
+    color: $active-colour;
   }
 }
 
