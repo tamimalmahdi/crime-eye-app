@@ -79,10 +79,12 @@ class OrdersController < ApplicationController
     params.require(:order).permit(:name, :address, :email, :pay_type)
   end
 
+  # make sure cart isnt empty
   def ensure_cart_isnt_empty
     redirect_to home_home_url, notice: 'Your cart is empty' if @cart.line_items.empty?
   end
 
+  # checkout options selected
   def pay_type_params
     if order_params[:pay_type] == 'Credit Card'
       params.require(:order).permit(:credit_card_number, :expiration_date)

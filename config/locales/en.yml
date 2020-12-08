@@ -47,10 +47,18 @@ en:
   products:
     index:
       title: 'Products'
+    edit:
+      title: 'Edit Product'
+    new:
+      title: 'New Product'
 
   orders:
     index:
       title: 'Orders'
+    new:
+      title: 'New Order'
+    edit:
+      title: 'Edit Order'
 
   carts:
     index:
@@ -59,3 +67,19 @@ en:
   line_items:
     index:
       title: 'Line Items'
+
+  admin:
+    index:
+      title: 'Welcome Admin'
+
+  users:
+    index:
+      title: 'Users'
+    new:
+      title: 'New User'
+    edit:
+      title: 'Edit User'
+
+  shared:
+    footer:
+      text: 'Project Designed by - Tamim Almahdi ©'

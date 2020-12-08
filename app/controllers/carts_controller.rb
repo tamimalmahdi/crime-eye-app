@@ -74,6 +74,7 @@ class CartsController < ApplicationController
     params.fetch(:cart, {})
   end
 
+  # if cart no longer exists or the association is invalid
   def invalid_cart
     logger.error "Attempt to access invalid cart #{params[:id]}"
     redirect_to home_home_url, notice: 'Invalid cart'
