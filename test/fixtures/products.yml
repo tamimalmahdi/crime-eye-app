@@ -2,13 +2,13 @@
 #lorem.jpg is a empy jpg file
 
 one:
- title: MyString
+ title: Product 1
  description: MyText
  price: 9.99
  image_url: lorem.jpg
 
 two:
- title: MyString
+ title: Product 2
  description: MyText
  price: 9.99
  image_url: lorem.jpg

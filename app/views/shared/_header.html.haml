@@ -23,5 +23,6 @@
     %a{:class => is_active?(logout_path), :href => logout_path, "data-method" => "delete"} Logout
   - else
     %a{:class => is_active?(login_path), :href => login_path} Login
+
   %a.icon{:href => "javascript:void(0);", :onclick => "myFunction()"}
     %i.fa.fa-bars

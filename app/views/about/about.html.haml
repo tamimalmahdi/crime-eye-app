@@ -4,9 +4,9 @@
   %p= t('.about')
   %h1= t('.contact')
   .border
-  %form#my-form.contact-form{:action => "mailto:webmaster@example.com", :method => "post", :target => "_blank"}
+  %form#my-form.contact-form{:action => "mailto:chesscentral2020@gmail.com", :method => "post", :enctype => "text/plain"}
     %input.contact-form-text{:name => "name", :placeholder => "Your name", :required => "", :type => "text"}/
     %input.contact-form-text{:name => "email", :placeholder => "Your email", :required => "", :type => "email"}/
-    %textarea.contact-form-text{:name => "message", :placeholder => "Your message", :required => ""}
+    %textarea.contact-form-text{:name => "message", :placeholder => "Your message", :required => "", :type => "text"}
     %input.contact-form-btn{:type => "submit", :value => "Send"}/
     #status
