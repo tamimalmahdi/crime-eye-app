@@ -68,8 +68,10 @@ Rails.application.configure do
     port: 587,
     domain: 'domain.of.sender.net',
     authentication: 'plain',
-    user_name: 'dave',
-    password: 'secret',
+    user_name: 'chesscentral2020@gmail.com',
+    password: 'Waterfall127',
     enable_starttls_auto: true
   }
+
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
 end
