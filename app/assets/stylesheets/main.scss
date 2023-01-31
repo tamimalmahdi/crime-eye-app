@@ -1,0 +1,418 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#container{
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+
+html {
+  height: 100%;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// marker css
+
+.marker {
+  background-image: image-url('marker-11.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerDrugs {
+  background-image: image-url('drugs.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerBurglary {
+  background-image: image-url('burglary.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerViolent {
+  background-image: image-url('violent-crime.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerAnti-social {
+  background-image: image-url('anti-social-behaviour.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerBicycle-theft {
+  background-image: image-url('bicycle-theft.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerCriminal-damage-arson {
+  background-image: image-url('criminal-damage-arson.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerOther-crime {
+  background-image: image-url('other-crime.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerOther-theft {
+  background-image: image-url('anti-social-behaviour.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerVehicle-crime {
+  background-image: image-url('vehicle-crime.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerRoberry {
+  background-image: image-url('robbery.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerShoplift {
+  background-image: image-url('shoplifting.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerTheft-from-person {
+  background-image: image-url('theft-from-person.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.markerPublic-order {
+  background-image: image-url('public-order.svg');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mapboxgl-ctrl-logo {
+    display: none !important;
+}
+
+pre.ui-coordinates {
+  position:absolute;
+  bottom:10px;
+  left:10px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+}
+
+pre.user-tracker {
+  position: absolute;
+  top: 15px;
+  right: 280px;
+  padding:5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:18px;
+  border-radius:3px;
+}
+
+//stats slide stats css
+.statsbar {
+  height: 80%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed;; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  bottom: 12%;
+  left: 10px;
+  background-color: #9EB1B4; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 50px; /* Place content 60px from the top */
+  padding-bottom: 50px;
+  border-radius: 3px;
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+.statsbar .content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.statsbar .statsClose a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2E3A3F;
+  display: block;
+  position: absolute;
+  top: 45%;
+  transition: 0.3s;
+}
+
+
+.statsbar a:hover {
+  color: #f1f1f1;
+}
+
+.statsbar .statsClosebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.statsDate {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 5px 10px;
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  font-size:11px;
+  line-height:9px;
+  border-radius:3px;
+}
+
+.statsopenbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background:rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: absolute;
+  z-index:1;
+  border-radius: 3px;
+}
+
+.statsopenbtn:hover {
+  background-color: #566466;
+}
+
+// newsbar css
+
+.newsbar {
+  height: 80%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed;; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  bottom: 12%;
+  left: 10px;
+  background-color: #9EB1B4; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 60px from the top */
+  padding-bottom: 50px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.newsbar .content ul {
+  padding: 0;
+  margin: 0;
+}
+
+.newsbar .content #newsfeed li{
+  list-style: none;
+  display: block;
+}
+
+.newsbar .content #newsfeed li a{
+  list-style: none;
+  display: block;
+  font-weight: bold;
+  color: #2E3A3F;
+}
+
+.newsbar .content #newsfeed li a:hover{
+  color: #007BFF;
+}
+
+.newsbar .content #newsfeed li img{
+  width: 100%;
+  height: auto;
+}
+
+.newsbar .content #newsfeed li p{
+  color: #2E3A3F;
+}
+
+.newsbar .content {
+  padding: 50px;
+}
+
+.newsbar .content h1 {
+  border-bottom: 3px solid #000;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+  color: #2E3A3F;
+}
+
+.newsClose  {
+  position: sticky;
+  top: 45%;
+}
+
+.newsbar .newsClose a {
+  float: right;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2E3A3F;
+  display: block;
+  position: absolute;
+  top: 45%;
+  transition: 0.3s;
+}
+
+.newsbar a:hover {
+  color: #f1f1f1;
+}
+
+.newsbar .newsClosebtn {
+  position: fixed;
+  top: 0;
+  right: 5px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sliders{
+  display: block;
+  left: 0;
+  top: 0;
+  left: 10px;
+  top: 40%;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.sliders ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sliders li {
+  display: block;
+  padding-bottom: 60px;
+}
+
+.newsopenbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background:rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position:absolute;
+  z-index:1;
+  border-radius: 3px;
+}
+
+.newsopenbtn:hover {
+  background-color: #566466;
+}
+
+// scroll bar css
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #2E3A3F);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #007BFF);
+}

@@ -1,0 +1,31 @@
+<div id="map"></div>
+<div class="sliders">
+  <ul>
+    <li class="statslist"><button class="statsopenbtn" onclick="openStats()">📊</button></li>
+    <li class="newslist"><button class="newsopenbtn" onclick="openNews()">📰</button></li>
+  </ul>
+</div>
+
+<div id="slideStats" class="statsbar">
+  <div class="content">
+    <div class="statsClose">
+      <a href="javascript:void(0)" class="statsClosebtn" onclick="closeStats()">❰</a>
+    </div>
+    <div id="canvasWrapper"></div>
+    <div id="myDate" class="statsDate"></div>
+  </div>
+</div>
+
+<div id= "slideNews" class="newsbar">
+    <div class="newsClose">
+      <a href="javascript:void(0)" class="newsClosebtn" onclick="closeNews()">❰</a>
+    </div>
+    <div id="output" class="content">
+      <h1><strong>Live News</strong></h1>
+      <ul id=newsfeed></ul>
+    </div>
+</div>
+
+<%= render "shared/loader" %>
+<%= render "shared/newsbar" %>
+<%= render "shared/mapscript" %>

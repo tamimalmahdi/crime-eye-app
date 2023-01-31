@@ -1,5 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'chesscentral2020@gmail.com'
-  # Secret890
+  default from: 'from@example.com'
   layout 'mailer'
 end

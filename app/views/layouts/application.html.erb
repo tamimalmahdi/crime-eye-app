@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CrimeEye</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <div id="main">
+
+      <button class="openbtn" onclick="openNav()">☰</button>
+      <%= render "shared/sidebarnav" %>
+
+      <div class="container mt-4">
+        <%= render "shared/flashmessages" unless @disable_flash_messages %>
+        <%= render "shared/sidebarnav" %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

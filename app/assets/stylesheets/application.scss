@@ -9,249 +9,117 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "colours.scss";
+ @import "bootstrap";
 
-html {
-  height: 100%;
+ .sidebar {
+   height: 100%; /* 100% Full-height */
+   width: 0; /* 0 width - change this with JavaScript */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Stay on top */
+   top: 0;
+   left: 0;
+   background-color: #364446; /* Black*/
+   overflow-x: hidden; /* Disable horizontal scroll */
+   padding-top: 60px; /* Place content 60px from the top */
+   transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+ }
+
+ /* The sidebar links */
+ .sidebar a {
+   padding: 8px 8px 8px 32px;
+   text-decoration: none;
+   font-size: 25px;
+   color: #c1c1c1;
+   display: block;
+   transition: 0.3s;
+ }
+
+ /* When you mouse over the navigation links, change their color */
+ .sidebar a:hover {
+   color: #fff;
+ }
+
+ /* Position and style the close button (top right corner) */
+ .sidebar .closebtn {
+   position: absolute;
+   top: 0;
+   right: 25px;
+   font-size: 36px;
+   margin-left: 50px;
+ }
+
+ .sidebar ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+ }
+
+ .sidebar .active {
+   background-color: #263436;
+ }
+
+ /* The button used to open the sidebar */
+ .openbtn {
+   font-size: 20px;
+   cursor: pointer;
+   background:rgba(0,0,0,0.5);
+   color: white;
+   padding: 10px 15px;
+   border: none;
+   position:absolute;
+   top:10px;
+   left:10px;
+   z-index:1;
+   border-radius: 3px;
+ }
+
+ .openbtn:hover {
+   background-color: #566466;
+ }
+
+ /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+ #main {
+  position:relative;
+  transition: margin-left .3s;
+  padding: 16px;
+  height:100%;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+ /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+ @media screen and (max-height: 450px) {
+   .sidebar {padding-top: 15px;}
+   .sidebar a {font-size: 18px;}
+ }
 
-  .bg_image {
-    width: 100%;
-    height: auto;
-  }
-}
+ // loader css
+ .loader {
+   position: fixed;
+   z-index: 99;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: #364446;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 
-#notice,
-.notice {
-  background: $hover-colour;
-  border-radius: 0.5em;
-  border: solid 0.177em $bg-colour;
-  color: $bg-colour;
-  font-weight: bold;
-  margin-bottom: 1em;
-  padding: 1em 1.414em;
-  text-align: center;
-}
+ .loader > img {
+   width: 100px;
+ }
 
-#cart {
-  padding-top: 10px;
+ .loader.hidden {
+   animation: fadeOut 2s;
+   animation-fill-mode: forwards;
+ }
 
-  article {
-    h2 {
-      margin-top: 0;
-    }
-    background-color: $hover-colour;
-    padding: 1em;
-    margin: 1em;
-    @media (min-width: 30em) {
-      margin: 0; // desktop doesn't need this margin
-    }
-  }
-}
-
-nav.logged_in_nav {
-  padding-left: 0px;
-  margin-left: 0px;
-
-  ul {
-    list-style: none;
-    background-color: $bg-colour;
-    float: left;
-
-    overflow: hidden;
-    li {
-      a{
-        color: white
-      }
-      float: left;
-      display: block;
-      color: $nav-colour;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      /* Change the color of links on hover */
-      &:hover {
-        background-color: $hover-colour;
-        color: black;
-      }
-      /* Add an active class to highlight the current page */
-      &.active {
-        background-color: $active-colour;
-        color: white;
-      }
-    }
-  }
-
-  input[type="submit"] {
-    // Make the logout button look like a
-    // link, so it matches the nav style
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1em;
-    letter-spacing: 0.2em;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-  }
-
-  input[type="submit"]:hover {
-    color: $active-colour;
-  }
-}
-
-footer {
-  margin-top: auto;
-  background-color: $bg-colour;
-  color: #fff;
-  height: 40px;
-  width: 100%;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  padding-top: 15px;
-}
-/* Style the links inside the navigation bar */
-.topnav {
-  background-color: $bg-colour;
-  overflow: hidden;
-
-  a {
-    float: left;
-    display: block;
-    color: $nav-colour;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    /* Change the color of links on hover */
-    &:hover {
-      background-color: $hover-colour;
-      color: black;
-    }
-    /* Add an active class to highlight the current page */
-    &.active {
-      background-color: $active-colour;
-      color: white;
-    }
-  }
-
-  .icon {
-    display: none;
-  }
-}
-/* Hide the link that should open and close the topnav on small screens */
-/* The sidebar menu */
-.sidebar {
-  height: 100%;
-  /* 100% Full-height */
-  width: 0;
-  /* 0 width - change this with JavaScript */
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: $bg-colour;
-  /* Black*/
-  overflow-x: hidden;
-  /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
-  transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidebar */
-  /* The sidebar links */
-  a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: $nav-colour;
-    display: block;
-    transition: 0.3s;
-
-    &.active {
-      background-color: $active-colour;
-    }
-  }
-  /* When you mouse over the navigation links, change their color */
-  a:hover {
-    background-color: $hover-colour;
-    color: black;
-  }
-  /* Position and style the close button (top right corner) */
-  .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-}
-/* The button used to open the sidebar */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: $bg-colour;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: $hover-colour;
-  color: black;
-}
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  /* If you want a transition effect */
-  button {
-    display: none;
-    width: 100%;
-  }
-}
-
-#main_content {
-  transition: margin-left 0.5s;
-  /* If you want a transition effect */
-  padding: 20px;
-}
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-
-  .sidebar a {
-    font-size: 18px;
-  }
-
-  #main button {
-    display: block;
-  }
-}
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  #main button {
-    display: block;
-  }
-
-  .topnav {
-    display: none;
-  }
-}
+ @keyframes fadeOut {
+   100%{
+     opacity: 0;
+     visibility: hidden;
+   }
+ }

@@ -1,14 +1,8 @@
 {
-  "name": "ta00687_com2025_project",
+  "name": "crime_eye",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5",
-    "babel-preset-react": "^6.24.1",
-    "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
-  "devDependencies": {
-    "webpack-dev-server": "2.11.2"
+    "chart.js": "^3.2.0",
+    "vue-chartkick": "^1.1.0"
   }
 }

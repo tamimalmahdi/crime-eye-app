@@ -10,71 +10,43 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
-//= require bootstrap-sprockets
-//= require rails-ujs
-//= require activestorage
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= stub jsonmarkers
+//= require chartkick
+//= require Chart.bundle
 //= require_tree .
 
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
-  document.getElementById('mySidebar').style.width = "250px";
-  document.getElementById('main').style.marginLeft = "250px";
-  document.getElementById('main_content').style.marginLeft = "250px";
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("slideStats").style.marginLeft = "250px";
+  document.getElementById("slideNews").style.marginLeft = "250px";
 }
 
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
-  document.getElementById('mySidebar').style.width = "0";
-  document.getElementById('main').style.marginLeft = "0";
-  document.getElementById('main_content').style.marginLeft = "0";
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("slideStats").style.marginLeft = "0";
+  document.getElementById("slideNews").style.marginLeft = "0";
 }
 
-function ToggleText(elem) {
-  $('#'+elem.id+"p").toggle();
+function openStats() {
+  document.getElementById("slideStats").style.width = "500px";
 }
 
-function SetFontSize(val) {
-  $("*").each(function(i,e){
-    e.style.fontSize = val;
-  });
+function closeStats() {
+  document.getElementById("slideStats").style.width = "0";
 }
 
-function SetPageStyle(val) {
-  if (val === 'Dark') {
-    $("*").each(function(i,e){e.style.background = "black"});
-    $("*").each(function(i,e){e.style.color = "white"});
-  }
-  else {
-    $("*").each(function(i,e){e.style.background = "white"});
-    $("*").each(function(i,e){e.style.color = "black"});
-  }
+function openNews() {
+  document.getElementById("slideNews").style.width = "500px";
 }
 
-function ValidateProductForm() {
-  $('#ProductForm').validate({
-    rules: {
-      'product[name]': {required: true},
-      'product[description]': {required: true},
-      'product[price]': {required: true, digits: true, range: [0, Infinity]},
-      'product[image_url]': {required: true}
-    },
-    message: {
-      'product[name]': {required: "must enter product's name"},
-      'product[description]': {required: "must enter a product description"},
-      'product[price]': {required: "must have a product price"},
-      'product[image_url]': {required: "must have a image url"}
-    }
-  });
+function closeNews() {
+  document.getElementById("slideNews").style.width = "0";
 }
-
-$(document).ready(function() {
-
-  if(document.getElementById('welcome')) {
-    $('#welcomep').hide();
-  }
-
-  if (document.getElementById('ProductForm')) {
-    ValidateProductForm()
-  }
-
-});

@@ -1,6 +1,4 @@
 Rails.application.configure do
-  # Verifies that versions and hashed value of the package contents in the project's package.json
-  config.webpacker.check_yarn_integrity = true
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -32,8 +30,6 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
@@ -61,17 +57,18 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  # disables email delivey in development mode
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors= true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    domain: 'domain.of.sender.net',
-    authentication: 'plain',
-    user_name: 'chesscentral2020@gmail.com',
-    password: 'Waterfall127',
-    enable_starttls_auto: true
-  }
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'gmail.com',
+  user_name:            ENV["GMAIL_EMAIL"],
+  password:             ENV["GMAIL_PASSWORD"],
+  authentication:       'plain',
+  enable_starttls_auto: true  }
 
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = {host: "localhost:3000"}
+
 end

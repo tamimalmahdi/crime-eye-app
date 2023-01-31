@@ -1,85 +1,63 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
+# Files in the config/locales directory are used for internationalization and are automatically loaded by Rails. If you want to use locales other than
+# English, add the necessary files in this directory.
 #
 # To use the locales, use `I18n.t`:
-#
 #     I18n.t 'hello'
 #
 # In views, this is aliased to just `t`:
-#
 #     <%= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
-#
 #     I18n.locale = :es
-#
 # This would use the information in config/locales/es.yml.
 #
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
+# The following keys must be escaped otherwise they will not be retrieved by the default I18n backend:
 # true, false, on, off, yes, no
 #
 # Instead, surround them with single quotes.
-#
 # en:
 #   'true': 'foo'
 #
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+# To learn more, please read the Rails Internationalization guide available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  app_title: 'Chess Store'
-  app_description: 'A place to purchase chess sets and items'
 
-  home:
-    home:
-      title: 'Chess Central'
-      welcome: 'Welcome to my chess store!'
+  app_name: 'CrimeEye'
+  introduction_heading: 'Introduction to CrimeEye'
+  introduction_text: 'CrimeEye is a UK informational crime tracking website that allows users to check how populated crimes are in different neighbouring areas. UK crime data is collected from
+  <a href="https://data.police.uk/">PoliceAPI</a> which is made freely accessible to the public, our map is built from <a href="https://www.mapbox.com/">MapBox</a>
+  to provide users an interactive and searchable map, our twitter login system is used with <a href="https://developer.twitter.com/en">TwitterAPI</a>, and our real-time news is provided by
+  <a href="https://newsapi.org/">NewsAPI</a>.'
+  general_use_heading: 'General Use'
+  general_use_text: 'CrimeEye is used to convey specific and helpful information related to crime in UK areas you search for or for finding crimes in your current local area. Users are able to create an account by either
+  creating a local account or signing in with their Twitter account. An account must be signed in to be able to access our interactive map as part of our age-restriction policy. Users must be 13 years or older to access our map.'
+  general_use_disclaimer: 'Disclaimer notice: We strongly do not encourage users to actively seekout crime in real-life and therefore take no reponsibility in the outcomes of personal injuries or liabilites with the usage
+  of this website.'
+  instructional_usage_heading: 'Instructional Usage'
+  instructional_usage_text: 'Users are able to search for crime data in specific UK locations using our geocoder search bar, once an area is searched a list of valid UK areas will be returned in a selectable list in which the user must select
+  an area.<p>A list of markers on the map will be generated, where each individual marker represents one crime that has occurred. Clicking on the marker will provider an informational pop-up that will show more information relating to this single crime.
+  </p><p>If users wish to search for more precise locations, our geocoder search bar allows the inputs of longitude and latitude coordinate pairs in the form of [Lng, Lat]. For example, if users wished to search for a longitude of -0.5 and a latitude of 50 it will
+  be entered as "-0.5, 50" in the geocoder search bar.</p><p>We offer a mouse cursor tracker at the bottom-left of the map, which provides the current coordinates of the map using the cursor&#39;s current position relative to the map&#39;s geometric position to assist
+  users in finding a specific pair of coordinates on the map.</p>'
+  why_use_heading: 'Why use CrimeEye?'
+  why_use_text: 'CrimeEye aims to assist users with up-to-date crime data gathering, we aim to provide social awareness in crime activities through the usage of statistical crime data analysis, including but not limited to: visual graphs displaying
+  popular and tracked crimes, map coordinates of previous crime locations, legal outcomes of individual witness reports, real-time news associated with recent crimes etc. '
+  author_heading: 'Who made this website?'
+  author_list: 'CrimeEye is made by a team of students in the UK as part of our university project:'
+  authors: '<li>Andy Lee</li><li>Ali Tahir</li><li>Louise Arthur</li><li>Louis Dineen</li><li>Namanpreet Ghotra</li><li>Nikola Delchev</li><li>Tamim Almahdi</li>'
+  author_note: 'Stay safe and have a pleasant stay!'
 
-  about:
-    about:
-      title: 'About Us'
-      about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-      contact: 'Contact Us'
-
-  products:
-    index:
-      title: 'Products'
-    edit:
-      title: 'Edit Product'
-    new:
-      title: 'New Product'
-
-  orders:
-    index:
-      title: 'Orders'
-    new:
-      title: 'New Order'
-    edit:
-      title: 'Edit Order'
-
-  carts:
-    index:
-      title: 'Carts'
-
-  line_items:
-    index:
-      title: 'Line Items'
-
-  admin:
-    index:
-      title: 'Welcome Admin'
-
-  users:
-    index:
-      title: 'Users'
-    new:
-      title: 'New User'
-    edit:
-      title: 'Edit User'
-
-  shared:
-    footer:
-      text: 'Project Designed by - Tamim Almahdi ©'
+  main:
+    emergency:
+      emergency_heading: 'Emergency Contacts'
+      report_crime_heading: 'Help your local area'
+      report_crime_text: 'If you witnessed a crime, you should report it to the <a href="https://www.police.uk/pu/contact-the-police/report-a-crime-incident/" target="_blank">Official UK Police website</a> and provide as much
+      relevant information as possible.'
+      report_crime_contact: 'If you are in need of immediate assistance, please call the relevant national emergency contacts below: <br> Note: If you are on a mobile phone, touching on the phone numbers will automatically call
+      the service for you.'
+      emergency_numbers_heading: 'Emergency Numbers:'
+      emergency_number_uk: 'Emergency UK: <a href="tel:999">999</a>'
+      non_emergency_medical_uk: 'Non-Emergency Medical UK: <a href="tel:111">111</a>'
+      emergency_international: 'Emergency International: <a href="tel:112">112</a>'
+      non_emergency_police_uk: 'Non-Emergency Police UK: <a href="tel:101">101</a>'
+      crime_stoppers: 'Crime Stoppers: <a href="tel:0800-555111">0800-555111</a>'

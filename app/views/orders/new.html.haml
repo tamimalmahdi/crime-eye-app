@@ -1,9 +1,0 @@
-%h1= t('.title')
-
-%section.depot_form
-  %h2 Please Enter Your Details
-  = render 'form', order: @order
-
-= javascript_pack_tag("pay_type")
-
-= link_to 'Back', orders_path
