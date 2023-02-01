@@ -290,8 +290,8 @@ GEM
 
 PLATFORMS
   ruby
+  ruby
   x86_64-linux
-  
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
@@ -328,4 +328,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.17
+   2.4.6
